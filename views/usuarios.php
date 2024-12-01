@@ -65,17 +65,17 @@
                     <h1>Usuários</h1>
                 </div>
 
-                <div style="display: flex; align-items: center; justify-content: center; gap: 2rem">
-                    <button id="open-modal-cadastrar" style=" display: flex; align-items: center; justify-content: center; gap:0.8rem; font-size: 1rem; color: white; border: none; background: #122D32; cursor: pointer; padding: 6px 16px; border-radius: 8px;">
+                <!-- <div style="display: flex; align-items: center; justify-content: center; gap: 2rem">
+                    <button id="open-modal-cadastrar" style=" display: flex; align-items: center; justify-content: center; gap:0.8rem; font-size: 1rem; color: white; border: none; background: #081040; cursor: pointer; padding: 6px 16px; border-radius: 8px;">
                         Cadastrar
                         <i class='bx bxs-user-plus' style="font-size: 1.4rem;"></i>
                     </button>
 
-                    <button style=" display: flex; align-items: center; justify-content: center; gap:0.8rem; font-size: 1rem; color: white; border: none; background: #122D32; cursor: pointer; padding: 6px 16px; border-radius: 8px;">
+                    <button style=" display: flex; align-items: center; justify-content: center; gap:0.8rem; font-size: 1rem; color: white; border: none; background: #081040; cursor: pointer; padding: 6px 16px; border-radius: 8px;">
                         Export CSV
                         <i class='bx bxs-file-export' style="font-size: 1.2rem;"></i>
                     </button>
-                </div>
+                </div> -->
             </header>
 
             <div class="table-wrapper">
@@ -178,7 +178,7 @@
         </main>
 
         <script>
-            const rowsPerPage = 2;
+            const rowsPerPage = 10;
             let currentPage = 1;
             const tableBody = document.getElementById('table-users');
             const rows = tableBody.getElementsByTagName('tr');
@@ -223,7 +223,7 @@
 
             if (i === currentPage) {
                 pageButton.style.fontWeight = 'bold'; // Destaque para a página atual
-                pageButton.style.background = '#122D32';
+                pageButton.style.background = '#081040';
             }
 
             pageNumbers.appendChild(pageButton);
