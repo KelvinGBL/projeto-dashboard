@@ -1,0 +1,15 @@
+{
+    "name": "kelvin_gabriel/projeto_dashboard",
+    "autoload": {
+        "psr-4": {
+            "app\\": "app/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Kelvin Gabriel",
+            "email": "109625159+KelvinGBL@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
