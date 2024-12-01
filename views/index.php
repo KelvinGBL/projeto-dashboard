@@ -44,7 +44,7 @@
                 <li>
                     <a href="index.php">
                         <i class='bx bx-grid-alt'></i>
-                        <span class="link-name">Dashboard</span>
+                        <span class="link-name">Home</span>
                     </a>
                 </li>
 
@@ -62,7 +62,7 @@
             <header>
                 <div style="display: flex; align-items: center;">
                     <i class="sidebar-open bx bx-menu"></i>
-                    <h1>Dashboard</h1>
+                    <h1>Home</h1>
                 </div>
             </header>
 
