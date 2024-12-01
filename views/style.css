@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: #060816;
+    height: 100vh;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+    width: 8px; 
+}
+::-webkit-scrollbar-thumb {
+    background-color: #081040;     
+}
+::-webkit-scrollbar-track {
+    border-radius: 6px;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 260px;
+    background: #0E101D;
+    border-radius: 0px 10px 10px 0px;
+    padding-top: 1rem;
+    z-index: 100;
+    transition: 0.5s;
+}
+.sidebar.close {
+    width: 78px;
+}
+.sidebar header {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    color: white;
+}
+.sidebar header .logo-icon {
+    font-size: 2rem;
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
+}
+.sidebar header .logo-name {
+    font-size: 1.2rem;
+    font-weight: 600;
+    transition: 0.3s;
+}
+.sidebar.close .logo-name {
+    opacity: 0;
+    pointer-events: none;
+}
+.nav-links {
+    height: 100%;
+    padding: 30px 0 60px 0;
+    overflow: auto;
+}
+.nav-links li {
+    list-style: none;
+    transition: 0.4s;
+}
+.nav-links li:hover {
+    background: #081040;
+}
+.nav-links li i {
+    height: 50px;
+    min-width: 78px;
+    text-align: center;
+    line-height: 50px;
+    color: white;
+    font-size: 1.4rem;
+    cursor: pointer;
+}
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.nav-links li a .link-name {
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: white;
+    transition: 0.4s;
+}
+.sidebar.close .link-name {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.sidebar.close .sub-menu {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    padding: 10px 20px;
+    border-radius: 0 6px 6px 0;
+    opacity: 0;
+    pointer-events: none;
+}
+.sidebar.close li:hover .sub-menu {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+main {
+    position: relative;
+    left: 260px;
+    padding: 0rem 1.6rem;
+    padding-top: 1rem;
+    width: calc(100% - 260px);
+    transition: 0.5s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 2rem;
+}
+.sidebar.close ~ main {
+    left: 78px;
+    width: calc(100% - 78px);
+}
+main > header {
+    display: flex;align-items: center; justify-content: space-between;
+    position: sticky;
+    top: 0;
+    height: 60px;
+    color: white;
+    font-size: 2rem;
+    max-width: 90%;
+}
+main > header .sidebar-open {
+    margin: 0 15px;
+    margin-left: 0px;
+    cursor: pointer;
+}
+main > header h1{
+    font-size: 1.4rem;
+    font-weight: 600;
+}
+
+
+
+
+.table-wrapper {
+    overflow-x: auto;
+    max-width: 90%;
+    max-height: 400px;
+    padding-right: 10px;
+    border-radius: 10px 0px 0px 10px;
+}
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background: #0E101D;
+    color: white;
+    text-align: left;
+    transition: all 0.4s;
+    max-height: 400px;
+}
+th, td {
+    padding: 10px 20px;
+}
+th{
+    font-size: 1.2rem;
+    color: white;
+    background: #081040;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+tr{
+    transition: all 0.4s ease; 
+}
+tr:hover{
+    background: rgba(214, 214, 214, 0.1);
+    transition: all 0.4s ease;
+}
